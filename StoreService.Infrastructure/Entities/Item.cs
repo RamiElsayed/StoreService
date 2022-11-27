@@ -18,7 +18,7 @@ namespace StoreService.Infrastructure.Entities
         public Size SizeID { get; set; }
         public Color ColorID { get; set; }
 
-        public ICollection<Color> colors { get; set; } = new List<Color>();
-        public ICollection<Size> sizes { get; set; } = new List<Size>();
+        public ICollection<Color> Colors { get; set; } = new List<Color>();
+        public ICollection<Size> Sizes { get; set; } = new List<Size>();
     }
 }
