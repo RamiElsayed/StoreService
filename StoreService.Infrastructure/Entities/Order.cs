@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace StoreService.Infrastructure.Entities
 {
-    public class Color
+    public class Order
     {
-        public Color(string itemColor, Item itemID)
+        public Order(Item itemID, decimal quantity)
         {
-            ItemColor = itemColor;
             ItemID = itemID;
+            Quantity = quantity;
         }
 
         public int ID { get; set; }
-        public string ItemColor { get; set; }
         public Item ItemID { get; set; }
+        public decimal Quantity { get; set; }
 
         public ICollection<Item> Items { get; set; } = new List<Item>();
     }
