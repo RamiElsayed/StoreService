@@ -8,17 +8,17 @@ namespace StoreService.Infrastructure.Entities
 {
     public class Item
     {
-        public Item(IEnumerable<Item> items, IEnumerable<Color> colors, IEnumerable<Size> sizes, Order order)
+        public Item(Product product, Size size, Color color, Order order)
         {
-            Items = items;
-            Colors = colors;
-            Sizes = sizes;
-            this.Order = order;
+            Product = product;
+            Size = size;
+            Color = color;
+            Order = order;
         }
 
-        public IEnumerable<Item> Items { get; set; }
-        public IEnumerable<Color> Colors { get; set; }
-        public IEnumerable<Size> Sizes { get; set; }
+        public Product Product { get; set; }
+        public Size Size { get; set; }
+        public Color Color { get; set; }
         public Order Order { get; set; }
     }
 }
