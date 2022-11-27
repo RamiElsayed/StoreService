@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace StoreService.Infrastructure.Entities
 {
-    internal class Item
+    public class Item
     {
+        public int ID { get; set; }
+        public string Size { get; set; }
+        public string Color { get; set; }
+        public Stock StockId { get; set; }
     }
 }
