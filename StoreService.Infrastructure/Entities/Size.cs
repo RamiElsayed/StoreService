@@ -8,17 +8,14 @@ namespace StoreService.Infrastructure.Entities
 {
     public class Size
     {
-        public Size(string itemSize, Item itemID)
+        public Size(string productSize)
         {
-            ItemSize = itemSize;
-            ItemID = itemID;
+            ProductSize = productSize;
         }
 
         public int ID { get; set; }
-        public string ItemSize { get; set; }
+        public string ProductSize { get; set; }
 
-        public Item ItemID { get; set; }
-
-        public ICollection<Item> Items { get; set; } = new List<Item>();
+        public ICollection<Product> Items { get; set; } = new List<Product>();
     }
 }

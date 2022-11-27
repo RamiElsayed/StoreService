@@ -8,16 +8,14 @@ namespace StoreService.Infrastructure.Entities
 {
     public class Order
     {
-        public Order(Item itemID, decimal quantity)
+        public Order(int quantity)
         {
-            ItemID = itemID;
             Quantity = quantity;
         }
 
         public int ID { get; set; }
-        public Item ItemID { get; set; }
-        public decimal Quantity { get; set; }
+        public int Quantity { get; set; }
 
-        public ICollection<Item> Items { get; set; } = new List<Item>();
+        public ICollection<Product> Items { get; set; } = new List<Product>();
     }
 }

@@ -8,16 +8,14 @@ namespace StoreService.Infrastructure.Entities
 {
     public class Color
     {
-        public Color(string itemColor, Item itemID)
+        public Color(string productColor)
         {
-            ItemColor = itemColor;
-            ItemID = itemID;
+            ProductColor = productColor;
         }
 
         public int ID { get; set; }
-        public string ItemColor { get; set; }
-        public Item ItemID { get; set; }
+        public string ProductColor { get; set; }
 
-        public ICollection<Item> Items { get; set; } = new List<Item>();
+        public ICollection<Product> Items { get; set; } = new List<Product>();
     }
 }
