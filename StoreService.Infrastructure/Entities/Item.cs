@@ -8,9 +8,17 @@ namespace StoreService.Infrastructure.Entities
 {
     public class Item
     {
+        public Item(Size sizeID, Color colorID)
+        {
+            SizeID = sizeID;
+            ColorID = colorID;
+        }
+
         public int ID { get; set; }
-        public string Size { get; set; }
-        public string Color { get; set; }
-        public Stock StockId { get; set; }
+        public Size SizeID { get; set; }
+        public Color ColorID { get; set; }
+
+        public ICollection<Color> colors { get; set; } = new List<Color>();
+        public ICollection<Size> sizes { get; set; } = new List<Size>();
     }
 }
