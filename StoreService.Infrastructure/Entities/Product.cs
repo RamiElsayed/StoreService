@@ -8,8 +8,13 @@ namespace StoreService.Infrastructure.Entities
 {
     public class Product
     {
+        public Product(string name)
+        {
+            Name = name;
+        }
 
         public int ID { get; set; }
+        public string Name { get; set; }
         public int OrderID { get; set; }
         public Order? ProductOrder { get; set; }
 

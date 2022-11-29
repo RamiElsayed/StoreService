@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StoreService.Infrastructure.Entities
 {
-    public class Item
+    public class ItemEntity
     {
-        public Item(Product product, Size size, Color color, Order order)
+        public ItemEntity(Product product, Size size, Color color, Order order)
         {
             Product = product;
             Size = size;
