@@ -16,6 +16,8 @@ namespace StoreService.Infrastructure.Configrations
             builder.ToTable("Items");
             builder.HasKey(x => x.Product.ID);
 
+            builder.Property(x => x.Product.ID).ValueGeneratedOnAdd();
+            builder.Property(x => x.Product.Name).IsRequired();
             builder.Property(x => x.Color).IsRequired();
             builder.Property(x => x.Size).IsRequired();
         }

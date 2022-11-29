@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Api", "StoreService.Api\StoreService.Api.csproj", "{215F1D0A-1CA8-4CD9-81E2-CC96593052FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreService.Api", "StoreService.Api\StoreService.Api.csproj", "{215F1D0A-1CA8-4CD9-81E2-CC96593052FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Application", "StoreService.Application\StoreService.Application.csproj", "{556507B8-429E-4332-914B-6A342B489E43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreService.Application", "StoreService.Application\StoreService.Application.csproj", "{556507B8-429E-4332-914B-6A342B489E43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Infrastructure", "StoreService.Infrastructure\StoreService.Infrastructure.csproj", "{48D1A711-EFDC-4026-A6C8-817CCB0ABA1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreService.Infrastructure", "StoreService.Infrastructure\StoreService.Infrastructure.csproj", "{48D1A711-EFDC-4026-A6C8-817CCB0ABA1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
