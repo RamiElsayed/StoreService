@@ -13,7 +13,8 @@ namespace StoreService.Application.Queries.GetItems
 
         public async Task<ItemsResponse?> Handle(GetItemsQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var items = await _repository.GetAll();
+            return new ItemsResponse(items);
         }
     }
 }

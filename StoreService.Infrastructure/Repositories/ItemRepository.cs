@@ -19,7 +19,7 @@ namespace StoreService.Infrastructure.Repositories
 
         public Task<List<ItemEntity>> GetAll()
         {
-            return db.Set<ItemEntity>().ToList();
+            return db.Set<ItemEntity>().ToListAsync();
         }
     }
 }
