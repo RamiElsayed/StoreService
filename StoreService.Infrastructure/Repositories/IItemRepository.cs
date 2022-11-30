@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using StoreService.Infrastructure.Entities;
 
 namespace StoreService.Infrastructure.Repositories
 {
-    public class IItemRepository
+    public interface IItemRepository
     {
+        Task<List<ItemEntity>> GetAll();
     }
 }
