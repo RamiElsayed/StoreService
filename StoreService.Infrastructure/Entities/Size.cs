@@ -16,6 +16,6 @@ namespace StoreService.Infrastructure.Entities
         public int ID { get; set; }
         public string ProductSize { get; set; }
 
-        public ICollection<Product> Items { get; set; } = new List<Product>();
+        public ICollection<ItemEntity> Items { get; set; } = new List<ItemEntity>();
     }
 }

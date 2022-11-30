@@ -8,17 +8,17 @@ namespace StoreService.Infrastructure.Entities
 {
     public class ItemEntity
     {
-        public ItemEntity(Product product, Size size, Color color, Order order)
+        public ItemEntity(Product product, Size size, Color color,int quantity)
         {
             Product = product;
             Size = size;
             Color = color;
-            Order = order;
+            Quantity = quantity;
         }
 
         public Product Product { get; set; }
         public Size Size { get; set; }
         public Color Color { get; set; }
-        public Order Order { get; set; }
+        public int Quantity { get; set; }
     }
 }
