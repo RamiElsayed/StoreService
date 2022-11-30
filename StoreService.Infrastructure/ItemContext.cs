@@ -15,6 +15,7 @@ namespace StoreService.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ItemContext).Assembly);
             base.OnModelCreating(modelBuilder);
         }
     }

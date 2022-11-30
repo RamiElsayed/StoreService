@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace StoreService.Api.Controllers
 {
     [ApiController]
@@ -15,9 +16,10 @@ namespace StoreService.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Items()
+        [Route ("{ID}")]
+        public async Task<IActionResult> Get()
         {
-
+            var response = await _mediator.Send(new GetItemsQuery())
         }
 
     }

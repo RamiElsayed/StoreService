@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StoreService.Application.Queries.GetItems
 {
-    internal class GetItemHandler
+    internal class GetItemsQuery
     {
     }
 }
