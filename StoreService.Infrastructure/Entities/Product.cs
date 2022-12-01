@@ -18,7 +18,6 @@ namespace StoreService.Infrastructure.Entities
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public ICollection<Color> Colors { get; set; } = new List<Color>();
-        public ICollection<Size> Sizes { get; set; } = new List<Size>();
+        public ICollection<ItemEntity> Items { get; set; } = new List<ItemEntity>();
     }
 }

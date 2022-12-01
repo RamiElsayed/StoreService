@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StoreService.Application\StoreService.Application.csproj" />
+    <ProjectReference Include="..\StoreService.Core\StoreService.Core.csproj" />
     <ProjectReference Include="..\StoreService.Infrastructure\StoreService.Infrastructure.csproj" />
   </ItemGroup>
 

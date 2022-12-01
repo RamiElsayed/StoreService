@@ -1,9 +1,10 @@
 ﻿using MediatR;
+using StoreService.Core.Responses;
 using StoreService.Infrastructure.Repositories;
 
 namespace StoreService.Application.Queries.GetItems
 {
-    public class GetItemsHandler : IRequestHandler<GetItemsQuery, ItemsResponse?>
+    public class GetItemsHandler : IRequestHandler<GetItemsQuery, List<ItemResponse>>
     {
         private IItemRepository _repository;
         public GetItemsHandler(IItemRepository repository)
@@ -11,10 +12,10 @@ namespace StoreService.Application.Queries.GetItems
             _repository = repository;
         }
 
-        public async Task<ItemsResponse?> Handle(GetItemsQuery request, CancellationToken cancellationToken)
+        public async Task<List<ItemResponse>> Handle(GetItemsQuery request, CancellationToken cancellationToken)
         {
             var items = await _repository.GetAll();
-            return new ItemsResponse(items);
+            return items;
         }
     }
 }
