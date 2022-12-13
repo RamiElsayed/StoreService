@@ -1,8 +1,9 @@
 ﻿using MediatR;
+using StoreService.Core.Queries;
 using StoreService.Core.Responses;
 using StoreService.Infrastructure.Repositories;
 
-namespace StoreService.Application.Queries.GetItems
+namespace StoreService.Application.Handlers
 {
     public class GetItemsHandler : IRequestHandler<GetItemsQuery, List<ItemResponse>>
     {

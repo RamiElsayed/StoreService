@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using StoreService.Application.Queries.GetItems;
+using StoreService.Core.Queries;
 
 namespace StoreService.Api.Controllers
 {
@@ -19,6 +19,14 @@ namespace StoreService.Api.Controllers
         public async Task<IActionResult> Get()
         {
             var response = await _mediator.Send(new GetItemsQuery());
+            return Ok(response);
+        }
+
+        [HttpGet]
+        [Route("{productId}")]
+        public async Task<IActionResult> Get(Guid productId)
+        {
+            var response = await _mediator.Send(new GetItemQuery(productId));
             return Ok(response);
         }
 

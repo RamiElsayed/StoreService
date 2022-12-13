@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using StoreService.Application.Queries.GetItems;
+using StoreService.Application.Handlers;
 using StoreService.Infrastructure;
 using StoreService.Infrastructure.Repositories;
 
@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ItemContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<DbContext>(provider => provider.GetRequiredService<ItemContext>());
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
-builder.Services.AddMediatR(typeof(GetItemsHandler).Assembly);
+builder.Services.AddMediatR(typeof(GetItemHandler).Assembly);
 
 var app = builder.Build();
 

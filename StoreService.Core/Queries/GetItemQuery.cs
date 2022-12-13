@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoreService.Application.Queries.GetItem
+namespace StoreService.Core.Queries
 {
-    public record GetItemQuery() : IRequest<ItemResponse>;
+    public record GetItemQuery(Guid ProductId) : IRequest<ItemResponse>;
 }
