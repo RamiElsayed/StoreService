@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace StoreService.Infrastructure.Entities
 {
-    public class Product
+    public class ColorEntity
     {
-        public Product(string name, string description)
+        public ColorEntity(Guid id, string name)
         {
+            Id = id;
             Name = name;
-            Description = description;
         }
 
-        public int ID { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
 
         public ICollection<ItemEntity> Items { get; set; } = new List<ItemEntity>();
     }

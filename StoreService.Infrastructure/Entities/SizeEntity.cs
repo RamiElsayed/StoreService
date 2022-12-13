@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace StoreService.Infrastructure.Entities
 {
-    public class Size
+    public class SizeEntity
     {
-        public Size(string productSize)
+        public SizeEntity(Guid id, string name)
         {
-            ProductSize = productSize;
+            Id = id;
+            Name = name;
         }
 
-        public int ID { get; set; }
-        public string ProductSize { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
 
         public ICollection<ItemEntity> Items { get; set; } = new List<ItemEntity>();
     }

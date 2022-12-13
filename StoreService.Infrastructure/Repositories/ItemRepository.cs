@@ -20,12 +20,12 @@ namespace StoreService.Infrastructure.Repositories
 
         public Task<List<ItemResponse>> GetAll()
         {
-            return db.Set<Product>()
+            return db.Set<ProductEntity>()
                 .Select(p => new
                 {
                     Name = p.Name,
-                    Colors = p.Items.Select(i => i.Color.ProductColor).Distinct().ToList(),
-                    Sizes = p.Items.Select(i => i.Size.ProductSize).Distinct().ToList()
+                    Colors = p.Items.Select(i => i.Color.Name).Distinct().ToList(),
+                    Sizes = p.Items.Select(i => i.Size.Name).Distinct().ToList()
                 })
                 .Select(p => new ItemResponse(p.Name, p.Colors, p.Sizes))
                 .ToListAsync();

@@ -14,12 +14,14 @@ namespace StoreService.Infrastructure.Configrations
         public void Configure(EntityTypeBuilder<ItemEntity> builder)
         {
             builder.ToTable("Items");
-            builder.HasKey(x => x.Product.ID);
+            builder.HasKey(x => x.Id);
+            builder.HasIndex(x => new { x.ProductId, x.SizeId, x.ColorId }).IsUnique();
 
-            builder.Property(x => x.Product.ID).ValueGeneratedOnAdd();
-            builder.Property(x => x.Product.Name).IsRequired();
-            builder.Property(x => x.Color).IsRequired();
-            builder.Property(x => x.Size).IsRequired();
+            builder.Property(x => x.Quantity).IsRequired();
+
+            builder.HasOne(x => x.Product).WithMany(x => x.Items).HasForeignKey(x => x.ProductId);
+            builder.HasOne(x => x.Size).WithMany(x => x.Items).HasForeignKey(x => x.SizeId);
+            builder.HasOne(x => x.Color).WithMany(x => x.Items).HasForeignKey(x => x.ColorId);
         }
     }
 }

@@ -14,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ItemContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<DbContext>(provider => provider.GetRequiredService<ItemContext>());
+builder.Services.AddScoped<IItemRepository, ItemRepository>();
 builder.Services.AddMediatR(typeof(GetItemsHandler).Assembly);
 
 var app = builder.Build();

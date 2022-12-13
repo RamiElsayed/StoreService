@@ -16,7 +16,6 @@ namespace StoreService.Api.Controllers
         }
 
         [HttpGet]
-        [Route ("{ID}")]
         public async Task<IActionResult> Get()
         {
             var response = await _mediator.Send(new GetItemsQuery());
